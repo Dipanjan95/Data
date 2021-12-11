@@ -1,0 +1,73 @@
+All Commands:-
+
+1.view all databases
+-> show dbs
+
+2.create a new database or switch database
+-> use dbName
+
+3.view current database
+-> db
+
+4.to delete a database
+-> db.dropDatabase() [after checking the current database]
+
+5.view all collections
+-> show collections
+
+6.to create new collection
+-> db.createCollection('name')
+
+7.to delete a collection
+-> db.collectionName.drop()
+
+8.how to insert rows(documents) in collection
+-> db.collectionName.insert({field:value})
+
+9.how to insert many rows in collection
+-> db.collectionName.insertMany([{'name':'Dipanjan',
+                            'role': 'web developer'},
+                            {'name':'shekhar',
+                            'role': 'agri minister'},
+                            {'name':'Naresh',
+                            'role': 'chairman'}])
+
+10.show all rows in a collection
+-> db.collectionName.find()
+
+11.show all rows in details
+-> db.collectionName.find().pretty()
+
+12.search in mongoDb database
+-> db.collectionName.find({field:value of specified row})
+
+13.to show limited rows in a collection
+-> db.collectionName.find().limit(n)
+
+14.to show the number of rows in a collection
+-> db.collectionName.find().count()
+
+15.find the first row matching the object(query)
+-> db.collectionName.findOne({query})
+
+16.update a row
+-> db.collectionName.update({query},{property})
+
+17.use of mongodb increment operator
+-> db.clN.update({query},{$inc:{field:1/2/..n}})
+
+18.use of mongodb rename operator
+-> db.clN.update({query},{$rename:{name:newName}})  
+
+19.how to delete a row
+-> db.clN.remove({query})
+
+20.to show the rows, has a specific field value less than some value
+-> db.clN.find({field:{$lt:value}})
+
+21. to show the rows, has a specific field value greater than some value
+-> db.clN.find({field:{$gt:value}})   
+
+                      
+
+
